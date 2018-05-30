@@ -10,8 +10,12 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "actions-on-google": "^2.0.0",
     "firebase-admin": "~5.12.1",
-    "firebase-functions": "^1.0.3"
+    "firebase-functions": "^1.0.3",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.22.1",
+    "winston": "^2.4.2"
   },
   "devDependencies": {
     "eslint": "^4.12.0",
