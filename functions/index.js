@@ -1,8 +1,22 @@
-const functions = require('firebase-functions');
+'use strict';
+const express = require('express');
+const bodyParser = require('body-parser');
+const server = express();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+// to send form data in body
+server.use(bodyParser.json());
+
+// to access assets like images
+// server.use(express.static('public'));
+
+server.post('/', (req, res) => {
+  res.send("hello from post");
+});
+server.get('/', (req, res) => {
+  res.send("hello from get");
+});
+
+server.listen(8010, () => {
+  console.log('Example server listening on port 8010!')
+});
+
