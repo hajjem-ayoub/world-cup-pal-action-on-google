@@ -3,62 +3,62 @@ const moment = require('moment');
 class MatchModel {
 
     constructor(id, homeTeam, awayTeam, homeResult, awayResult, date, stadium, channels, type, rawHometeam, rawAwayteam, groupname) {
-        this.id = id;
-        this.homeTeam = homeTeam;
-        this.awayTeam = awayTeam;
-        this.homeResult = homeResult;
-        this.awayResult = awayResult;
-        this.date = date;
-        this.stadium = stadium;
-        this.channels = channels;
-        this.type = type;
-        this.groupname = groupname;
-        this.rawHometeam = rawHometeam;
-        this.rawAwayteam = rawAwayteam;
+        this._id = id;
+        this._homeTeam = homeTeam;
+        this._awayTeam = awayTeam;
+        this._homeResult = homeResult;
+        this._awayResult = awayResult;
+        this._date = date;
+        this._stadium = stadium;
+        this._channels = channels;
+        this._type = type;
+        this._groupname = groupname;
+        this._rawHometeam = rawHometeam;
+        this._rawAwayteam = rawAwayteam;
     }
 
     getId() {
-        return this.id;
+        return this._id;
     }
 
     getHomeTeam() {
-        return this.homeTeam;
+        return this._homeTeam;
     }
 
     getAwayTeam() {
-        return this.awayTeam;
+        return this._awayTeam;
     }
 
     getHomeResult() {
-        return this.homeResult;
+        return this._homeResult;
     }
 
     setHomeResult(result) {
-        this.homeResult = result;
+        this._homeResult = result;
     }
 
     getAwayResult() {
-        return this.awayResult;
+        return this._awayResult;
     }
 
     setAwayResult(result) {
-        this.awayResult = result;
+        this._awayResult = result;
     }
 
     getDate() {
-        return this.date;
+        return this._date;
     }
 
     getStadium() {
-        return this.stadium;
+        return this._stadium;
     }
 
     getChannels() {
-        return this.channels;
+        return this._channels;
     }
 
     getType() {
-        return this.type;
+        return this._type;
     }
 
     isFinish() {
@@ -87,23 +87,23 @@ class MatchModel {
     }
 
     setHomeTeam(team) {
-        this.homeTeam = team;
+        this._homeTeam = team;
     }
 
     setAwayTeam(team) {
-        this.awayTeam = team;
+        this._awayTeam = team;
     }
 
     getRawHometeam() {
-        return this.rawHometeam;
+        return this._rawHometeam;
     }
 
     getRawAwayteam() {
-        return this.rawAwayteam;
+        return this._rawAwayteam;
     }
 
     getGroupname() {
-        return this.groupname;
+        return this._groupname;
     }
 }
 

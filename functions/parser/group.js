@@ -141,7 +141,7 @@ class GroupParser {
                 } else if (match.getHomeResult() > match.getAwayResult()) {
                     standing.addWin();
                 } else {
-                    standing.addLost();
+                    standing.addLoss();
                 }
             } else {
                 standing.addGoalsFor(match.getAwayResult());
@@ -151,7 +151,7 @@ class GroupParser {
                 } else if (match.getHomeResult() < match.getAwayResult()) {
                     standing.addWin();
                 } else {
-                    standing.addLost();
+                    standing.addLoss();
                 }
             }
             standings[index] = standing;

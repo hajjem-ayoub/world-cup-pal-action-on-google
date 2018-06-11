@@ -1,35 +1,35 @@
 class StadiumModel {
 
     constructor(id, name, lat, lng) {
-        this.id = id;
-        this.name = name;
-        this.lat = lat;
-        this.lng = lng;
-        this.matches = [];
+        this._id = id;
+        this._name = name;
+        this._lat = lat;
+        this._lng = lng;
+        this._matches = [];
     }
 
     getId() {
-        return this.id;
+        return this._id;
     }
 
     getName() {
-        return this.name;
+        return this._name;
     }
 
     getLat() {
-        return this.lat;
+        return this._lat;
     }
 
     getLng() {
-        return this.lng;
+        return this._lng;
     }
 
     addMatch(match) {
-        this.matches.push(match);
+        this._matches.push(match);
     }
 
     getMatches() {
-        return this.matches;
+        return this._matches;
     }
 }
 

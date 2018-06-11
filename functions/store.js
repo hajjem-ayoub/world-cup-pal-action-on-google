@@ -9,21 +9,23 @@ class DataStore {
     logger.debug(logObject('DataStore', 'constructor', {
       info: 'DataStore instance created'
     }));
-
     this.DATA_URL = 'https://cdn.rawgit.com/lsv/fifa-worldcup-2018/master/data.json';
   }
 
   getData() {
-    fetch(this.DATA_URL)
+    if (this.store) {
+      return Promise.resolve(this.store)
+    }
+    return fetch(this.DATA_URL)
       .then((response) => {
         return response.json();
       })
       .then((json) => {
-        return DataParser.parse(json);
+        this.store = DataParser.parse(json);
+        return this.store;
       })
-      .catch((error) => console.log(error));
+      .catch((error) => error);
   }
-
 }
 
-(new DataStore()).getData()
+module.exports = DataStore;

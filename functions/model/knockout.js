@@ -1,21 +1,21 @@
 class KnockoutModel {
 
     constructor(id, name, matches) {
-        this.id = id;
-        this.name = name;
-        this.matches = matches;
+        this._id = id;
+        this._name = name;
+        this._matches = matches;
     }
 
     getId() {
-        return this.id;
+        return this._id;
     }
 
     getName() {
-        return this.name;
+        return this._name;
     }
 
     getMatches() {
-        return this.matches;
+        return this._matches;
     }
 }
 

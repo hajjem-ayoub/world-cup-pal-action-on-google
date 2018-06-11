@@ -1,41 +1,41 @@
 class StandingModel {
 
-    constructor(team, played, wins, draws, losts, goalsFor, goalsAgainst) {
-        this.team = team;
-        this.played = played || 0;
-        this.wins = wins || 0;
-        this.draws = draws || 0;
-        this.losts = losts || 0;
-        this.goalsFor = goalsFor || 0;
-        this.goalsAgainst = goalsAgainst || 0;
+    constructor(team, played, wins, draws, losses, goalsFor, goalsAgainst) {
+        this._team = team;
+        this._played = played || 0;
+        this._wins = wins || 0;
+        this._draws = draws || 0;
+        this._losses = losses || 0;
+        this._goalsFor = goalsFor || 0;
+        this._goalsAgainst = goalsAgainst || 0;
     }
 
     getTeam() {
-        return this.team;
+        return this._team;
     }
 
     getPlayed() {
-        return this.played;
+        return this._played;
     }
 
     getWins() {
-        return this.wins;
+        return this._wins;
     }
 
     getDraws() {
-        return this.draws;
+        return this._draws;
     }
 
-    getLosts() {
-        return this.losts;
+    getLosses() {
+        return this._losses;
     }
 
     getGoalsFor() {
-        return this.goalsFor;
+        return this._goalsFor;
     }
 
     getGoalsAgainst() {
-        return this.goalsAgainst;
+        return this._goalsAgainst;
     }
 
     getGoalsDifference() {
@@ -47,32 +47,32 @@ class StandingModel {
     }
 
     addPlayed() {
-        this.played += 1;
+        this._played += 1;
     }
 
     addWin() {
-        this.wins += 1;
+        this._wins += 1;
     }
 
     addDraw() {
-        this.draws += 1;
+        this._draws += 1;
     }
 
-    addLost() {
-        this.losts += 1;
+    addLoss() {
+        this._losses += 1;
     }
 
     addGoalsFor(goals) {
         if (goals) {
-            goals = +this.goalsFor + +goals;
-            this.goalsFor = goals;
+            goals = +this._goalsFor + +goals;
+            this._goalsFor = goals;
         }
     }
 
     addGoalsAgainst(goals) {
         if (goals) {
-            goals = +this.goalsAgainst + +goals;
-            this.goalsAgainst = goals;
+            goals = +this._goalsAgainst + +goals;
+            this._goalsAgainst = goals;
         }
     }
 

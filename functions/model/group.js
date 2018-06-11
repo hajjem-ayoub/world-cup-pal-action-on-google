@@ -1,13 +1,13 @@
 class GroupModel {
     constructor(name, standings, matches, finished) {
-        this.name = name;
-        this.standings = standings;
-        this.matches = matches;
-        this.finished = finished;
+        this._name = name;
+        this._standings = standings;
+        this._matches = matches;
+        this._finished = finished;
     }
 
     getName() {
-        return this.name;
+        return this._name;
     }
 
     getDisplayName() {
@@ -15,23 +15,23 @@ class GroupModel {
     }
 
     getStandings() {
-        return this.standings;
+        return this._standings;
     }
 
     setStandings(standings) {
-        this.standings = standings;
+        this._standings = standings;
     }
 
     getMatches() {
-        return this.matches;
+        return this._matches;
     }
 
     getFinished() {
-        return this.finished;
+        return this._finished;
     }
 
     setFinish(finish) {
-        this.finished = finish;
+        this._finished = finish;
     }
 }
 
