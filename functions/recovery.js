@@ -628,7 +628,7 @@ const getStandingsSpeech = (standings) => {
       if (matchPlayedIndex === 0) {
         standingsSpeech.push(ssmlResponse.say(`with ${matchPlayedNumber} games played`, { volume: "+6dB" }))
       } else {
-        standingsSpeech.push(ssmlResponse.say(`And with ${matchPlayedNumber} games played`, { volume: "+6dB" }))
+        standingsSpeech.push(ssmlResponse.say(`And with only ${matchPlayedNumber} games played`, { volume: "+6dB" }))
       }
     }
     Object.keys(standingsGrouping[matchPlayedNumber]).forEach((pointsNumber, pointsNumberIndex) => {
@@ -640,7 +640,7 @@ const getStandingsSpeech = (standings) => {
         }
       } else {
         if (pointsNumberIndex === Object.keys(standingsGrouping[matchPlayedNumber]).length - 1) {
-          standingsSpeech.push(ssmlResponse.say(`And with ${pointsNumber} points we have ${standingsGrouping[matchPlayedNumber][pointsNumber].join(' ')}`, { volume: "+6dB" }))
+          standingsSpeech.push(ssmlResponse.say(`And with only ${pointsNumber} points we have ${standingsGrouping[matchPlayedNumber][pointsNumber].join(' ')}`, { volume: "+6dB" }))
         } else {
           standingsSpeech.push(ssmlResponse.say(`${standingsGrouping[matchPlayedNumber][pointsNumber].join(`, <break time='0.2s'/> `)} have ${pointsNumber} points`, { volume: "+6dB" }))
         }

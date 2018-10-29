@@ -1,17 +1,12 @@
 
 class AppModel {
-  constructor(groups, knockouts, stadiums){
+  constructor(groups, stadiums){
     this._groups = groups;
-    this._knockouts = knockouts;
     this._stadiums = stadiums;
   }
   
   getGroups(){
     return this._groups;
-  }
-  
-  getKnockouts(){
-    return this._knockouts;
   }
   
   getStadiums(){

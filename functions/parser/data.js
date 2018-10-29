@@ -3,7 +3,7 @@ const StadiumParser = require('./stadium');
 const ChannelParser = require('./channel');
 const TeamParser = require('./team');
 const GroupParser = require('./group');
-const KnockoutParser = require('./knockout');
+//const KnockoutParser = require('./knockout');
 const moment = require('moment');
 
 class DataParser {
@@ -13,8 +13,8 @@ class DataParser {
         ChannelParser.parse(data.tvchannels);
         TeamParser.parse(data.teams);
         const groups = GroupParser.parse(data.groups);
-        const knockouts = KnockoutParser.parse(data.knockout, groups);
-        return new AppModel(groups, knockouts, stadiums);
+        //const knockouts = KnockoutParser.parse(data.knockout, groups);
+        return new AppModel(groups, stadiums);
     }
 
     static getDate(date) {
